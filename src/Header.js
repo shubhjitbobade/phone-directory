@@ -1,12 +1,12 @@
 import React from "react";
 import './Header.css'
 
-const Header = function Header() {
+const Header = function Header(Props) {
   
     return (
 
         <div className="header">
-            Phone Directory
+            {Props.heading}
         </div>
     );
 }
@@ -14,7 +14,7 @@ const Header = function Header() {
 //     render(){
 //         return(
 //             <div className="header">
-//                 Phone Directory
+//                {this.props.heading}
 //             </div>
 //         )
 //     }
