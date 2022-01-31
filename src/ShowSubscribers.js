@@ -1,19 +1,23 @@
 import Header from "./Header";
 import React, { Component } from "react";
 import './ShowSubscribers.css';
+import { Link } from 'react-router-dom';
 
 
 class ShowSubscribers extends Component {
 
-   
+   onDeletedClick = (subscriberId) => {
+      this.props.deleteSubscriberHandler(subscriberId);
+   }
+
    render() {
-    
+
 
       return (
          <div>
             <Header heading="Phone-directory" />
             <div className="component-body-container">
-               <button className="custom-btn add-btn">Add</button>
+               <Link to="/add"><button className="custom-btn add-btn">Add</button></Link>
                <div className="grid-container heading-container">
                   <span className="grid-item name-heading">Name</span>
                   <span className="grid-item phone-heading">Phone</span>
@@ -30,7 +34,6 @@ class ShowSubscribers extends Component {
                      </div>
                   })
                }
-
 
             </div>
          </div>
